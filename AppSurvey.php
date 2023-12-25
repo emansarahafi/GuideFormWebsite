@@ -1,7 +1,7 @@
 <?php
 define ('url',"https://api.telegram.org/botINSERT_BOT_TOEKN_HERE/");
 
-$chat_id = '@Survey2022Channel';
+$chat_id = 'INSERT_CHAT_ID_HERE';
 if(isset($_POST['submit']))
     $name = $_POST["name"];
     $email = $_POST["email"];
