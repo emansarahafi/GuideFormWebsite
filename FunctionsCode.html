@@ -1,0 +1,88 @@
+<head>
+    <title>
+        Buttons' & Dropdown Menus' Python Code
+    </title>
+    
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <h1>The code for the buttons' & dropdown menus':</h1>
+    <pre><code class="python">
+      #Create functions to access links
+      def openwebsite():
+         new = 1
+         url = "https://tashfeen.tech/"
+         webbrowser.open(url,new=new)
+      
+      def appwebsite():
+         new = 1
+         url = "http://localhost/TashfeenUniForm/appwebsite.html"
+         webbrowser.open(url,new=new)
+      
+      def brochure():
+         new = 1
+         url = "http://localhost/TashfeenUniForm/guideform.pdf"
+         webbrowser.open(url,new=new)
+         
+      def openform():
+         new = 1
+         url = "http://localhost/TashfeenUniForm/appsurvey.html"
+         webbrowser.open(url,new=new)
+      
+      #Create buttons for the interface
+      form_button = tk.Button(root,
+                         text="Access the survey",
+                         width=20,height=2,
+                         command=openform)
+      
+      website_button = tk.Menubutton(root,
+                         text="Access the links",
+                         width=20,height=2)
+      website_button.menu = Menu(website_button)
+      
+      data_button = tk.Menubutton(root,
+                         text="Access the data",
+                         width=20,height=2)
+      data_button.menu = Menu(data_button)
+      
+      #Personalize drop down menu for websites
+      website_button["menu"] = website_button.menu
+      website_button.menu.add_checkbutton(label="The application", command=appwebsite)
+      website_button.menu.add_checkbutton(label="The brochure", command=brochure)
+      website_button.menu.add_checkbutton(label="The company", command=openwebsite)
+      
+      #Personalize drop down menu for data
+      data_button["menu"] = data_button.menu
+      data_button.menu.add_checkbutton(label="Age", command=lambda:[telegram(), agegraphs()])
+      data_button.menu.add_checkbutton(label="Gender", command=lambda:[telegram(), gendergraphs()])
+      data_button.menu.add_checkbutton(label="University", command=lambda:[telegram(), unigraphs()])
+      data_button.menu.add_checkbutton(label="Major", command=lambda:[telegram(), majorgraphs()])
+      data_button.menu.add_checkbutton(label="Next step", command=lambda:[telegram(), nextstepgraphs()])
+      data_button.menu.add_checkbutton(label="Languages known", command=lambda:[telegram(), langgraphs()])
+      data_button.menu.add_checkbutton(label="Learning method", command=lambda:[telegram(), wheregraphs()])
+      data_button.menu.add_checkbutton(label="Learning duration", command=lambda:[telegram(), timegraphs()])
+      data_button.menu.add_checkbutton(label="Experience rating", command=lambda:[telegram(), levelgraphs()])
+      data_button.menu.add_checkbutton(label="Tools & Career", command=lambda:[telegram(), ansgraphs()])
+      data_button.menu.add_checkbutton(label="Future career", command=lambda:[telegram(), jobgraphs()])
+      
+      #Buttons' Positions
+      form_button.place(relx=0.75, rely=0.4, anchor=CENTER)
+      website_button.place(relx=0.75, rely=0.5, anchor=CENTER)
+      data_button.place(relx=0.75, rely=0.6, anchor=CENTER)
+    </code></pre>
+
+    <footer>
+		<style>
+			/* Styling Footer */
+				footer {
+					text-align: center;
+					color: rgb(0, 0, 0);
+					padding-top: 0px;
+				}
+		</style>
+		<p> Tashfeen Engineering Solutions 2022<br> <a href="https://www.tashfeen.tech"> Powered by Tashfeen</a></p>
+	</footer>
+  </body>

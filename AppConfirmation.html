@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		Submission Confirmation
+	</title>
+	
+
+	<style>
+
+		/* Styling the Body element i.e. Color,
+		Font, Alignment */
+		body {
+			background-color: #DCDCDC;
+			font-family: Verdana;
+			text-align: center;
+			margin: 0;
+    		padding: 0;
+
+		}
+
+		.datetime {
+			vertical-align: top;
+			text-align: left;
+			font-family: inherit;
+			font-size: 10px;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		button {
+			background-color: #EFEFEF;
+			border: 1px solid #777;
+			border-radius: 1px;
+			font-family: inherit;
+			font-size: 15px;
+			display: block;
+			width: 250px;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+		}
+		
+	</style>
+
+	<h3 class = "datetime" id="current_date">
+		<script>
+		document.getElementById("current_date").innerHTML = Date();
+		</script>
+	</h3>
+
+    <img class="image3" src="GuideForm.png" alt="GuideForm.logo" width="175" height="150">
+	
+</head>
+
+
+
+<body>
+	<h1>The form has been successfully submitted!</h1>
+
+	<button type="submit" value="submit" name="submit" onclick="window.location.href='http://localhost/TashfeenUniForm/appwebsite.html'">
+		Back to the main menu
+	</button>
+
+	<footer>
+		<style>
+			/* Styling Footer */
+				footer {
+					text-align: center;
+					color: #fff;
+					padding-top: 450px;
+				}
+		</style>
+		<p> Tashfeen Engineering Solutions 2022<br> <a href="https://www.tashfeen.tech"> Powered by Tashfeen</a></p>
+	</footer>
+
+</body>
+
+</html>

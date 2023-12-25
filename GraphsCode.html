@@ -1,0 +1,294 @@
+<head>
+    <title>
+        Graphs' Python Code
+    </title>
+    
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <h1>The code for the graphs:</h1>
+    <pre><code class="python">
+      #Read TXT file to graph survey results
+        
+      def agegraphs():
+          #Read TXT file
+          # check if size of file is 0
+          file_path = "/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt"
+          if os.stat(file_path).st_size == 0:
+              errormsg = Label(root,text = "Data in unavailable at the moment", foreground="red",background='#DCDCDC', font=("helvetica", 10))
+              errormsg.place(relx=0.75, rely=0.7, anchor=CENTER)
+          else:
+              #Read TXT file and graph the data
+              fid=open("/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt")
+              file = fid.read()
+              
+              plt.figure()
+      
+              age = ['18-20', '21-29', '30-39', '40-49', '50 or above']
+              agefreq=[]
+              for k in age:
+                agefreq.append(file.count(k))
+              cb1 = plt.pie(agefreq, labels=age, autopct='%1.1f%%')
+              plt.title("Age")
+              
+              plt.show()
+      
+      def gendergraphs():
+          #Read TXT file
+          # check if size of file is 0
+          file_path = "/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt"
+          if os.stat(file_path).st_size == 0:
+              errormsg = Label(root,text = "Data in unavailable at the moment", foreground="red",background='#DCDCDC', font=("helvetica", 10))
+              errormsg.place(relx=0.75, rely=0.7, anchor=CENTER)
+          else:
+              #Read TXT file and graph the data
+              fid=open("/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt")
+              file = fid.read()
+      
+              plt.figure()
+      
+              gender = ['Male', 'Female']
+              genderfreq=[]
+              for k in gender:
+                genderfreq.append(file.count(k))
+              cb2 = plt.pie(genderfreq, labels=gender, autopct='%1.1f%%')
+              plt.title("Gender")
+      
+              plt.show()
+      
+      def unigraphs():
+          #Read TXT file
+          # check if size of file is 0
+          file_path = "/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt"
+          if os.stat(file_path).st_size == 0:
+              errormsg = Label(root,text = "Data in unavailable at the moment", foreground="red",background='#DCDCDC', font=("helvetica", 10))
+              errormsg.place(relx=0.75, rely=0.7, anchor=CENTER)
+          else:
+              #Read TXT file and graph the data
+              fid=open("/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt")
+              file = fid.read()
+      
+              plt.figure()
+      
+              uni = ['Ahlia University (AU)', 'American University of Bahrain (AUBH)', 'Applied Science University (ASU)', 'Arab Gulf University (AGU)', 'Arabian Open University (AOU)', 'Bahrain Institute of Banking and Finance (BIBF)', 'Bahrain Polytechnic (BP)', 'Bahrain Training Institute (BTI)', 'British University of Bahrain (BUB)', 'Gulf University (GU)', 'Kingdom University (KU)', 'Royal College of Surgeons in Ireland (RCSI) - Bahrain', 'Royal University for Women (RUW)', 'University College of Bahrain (UCB)', 'University of Bahrain (UOB)', 'University of Technology Bahrain (UTB)', 'Other University']
+              unifreq=[]
+              for k in uni:
+                unifreq.append(file.count(k))
+              unilabel = ['AU', 'AUBH', 'ASU', 'AGU', 'AOU', 'BIBF', 'BP', 'BTI', 'BUB', 'GU', 'KU', 'RCSI', 'RUW', 'UCB', 'UOB', 'UTB', 'Other']
+              cb3 = plt.bar(unilabel, unifreq)
+              plt.title('University')
+              plt.xlabel('University')
+              plt.ylabel('Frequency')
+      
+              plt.show()
+      
+      def majorgraphs():
+          #Read TXT file
+          # check if size of file is 0
+          file_path = "/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt"
+          if os.stat(file_path).st_size == 0:
+              errormsg = Label(root,text = "Data in unavailable at the moment", foreground="red",background='#DCDCDC', font=("helvetica", 10))
+              errormsg.place(relx=0.75, rely=0.7, anchor=CENTER)
+          else:
+              #Read TXT file and graph the data
+              fid=open("/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt")
+              file = fid.read()
+              
+              plt.figure()
+              
+              major = ['Aerospace Engineering', 'Agricultural Engineering', 'Architectural Engineering', 'Biological Engineering', 'Biomedical Engineering', 'Chemical Engineering', 'Civil Engineering', 'Computer Engineering', 'Computer Science', 'Electrical Engineering', 'Engineering Management', 'Industrial Engineering', 'Manufacturing Engineering', 'Marine Engineering', 'Materials Science', 'Mechanical Engineering', 'Mining Engineering', 'Nuclear Engineering', 'Petroleum Engineering', 'Software Engineering', 'Systems Engineering', 'Other Major']
+              majorfreq=[]
+              for k in major:
+                majorfreq.append(file.count(k))
+              majorlabel = ['Aerospace', 'Agricultural', 'Architectural', 'Biological', 'Biomedical', 'Chemical', 'Civil', 'CE', 'CS', 'EE', 'Engineering Management', 'IE', 'Manufacturing', 'Marine', 'Materials Science', 'Mechanical', 'Mining', 'Nuclear', 'Petroleum', 'Software', 'Systems', 'Other']
+              cb4 = plt.bar(majorlabel, majorfreq)
+              plt.title('Which major are you enrolled in?')
+              plt.xlabel('Major')
+              plt.ylabel('Frequency')
+      
+              plt.show()
+      
+      def nextstepgraphs():
+          #Read TXT file
+          # check if size of file is 0
+          file_path = "/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt"
+          if os.stat(file_path).st_size == 0:
+              errormsg = Label(root,text = "Data in unavailable at the moment", foreground="red",background='#DCDCDC', font=("helvetica", 10))
+              errormsg.place(relx=0.75, rely=0.7, anchor=CENTER)
+          else:
+              #Read TXT file and graph the data
+              fid=open("/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt")
+              file = fid.read()
+              
+              plt.figure()
+      
+              nextstep = ['Work on a start-up', 'Work at a company', 'Enroll for graduate studies', 'Take time off', 'Other next step']
+              nextstepfreq=[]
+              for k in nextstep:
+                nextstepfreq.append(file.count(k))
+              cb5 = plt.bar(nextstep, nextstepfreq)
+              plt.title('What is your next step after graduating from university?')
+              plt.xlabel('Next step')
+              plt.ylabel('Frequency')
+      
+              plt.show()
+      
+      def langgraphs():
+          #Read TXT file
+          # check if size of file is 0
+          file_path = "/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt"
+          if os.stat(file_path).st_size == 0:
+              errormsg = Label(root,text = "Data in unavailable at the moment", foreground="red",background='#DCDCDC', font=("helvetica", 10))
+              errormsg.place(relx=0.75, rely=0.7, anchor=CENTER)
+          else:
+              #Read TXT file and graph the data
+              fid=open("/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt")
+              file = fid.read()
+              
+              plt.figure()
+      
+              lang = ['Blockchain', 'C', 'C++', 'HTML', 'Java', 'JavaScript', 'MATLAB', 'PHP', 'Python', 'Other language(s)']
+              langfreq=[]
+              for k in lang:
+                langfreq.append(file.count(k))
+              cb6 = plt.bar(lang, langfreq)
+              plt.title('Languages and Frameworks known')
+              plt.xlabel('Languages & Frameworks')
+              plt.ylabel('Frequency')
+      
+              plt.show()
+      
+      def wheregraphs():
+          #Read TXT file
+          # check if size of file is 0
+          file_path = "/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt"
+          if os.stat(file_path).st_size == 0:
+              errormsg = Label(root,text = "Data in unavailable at the moment", foreground="red",background='#DCDCDC', font=("helvetica", 10))
+              errormsg.place(relx=0.75, rely=0.7, anchor=CENTER)
+          else:
+              #Read TXT file and graph the data
+              fid=open("/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt")
+              file = fid.read()
+              
+              plt.figure()
+              
+              where = ['College', 'Online', 'Self-taught', 'Other learning method']
+              wherefreq=[]
+              for k in where:
+                wherefreq.append(file.count(k))
+              cb7 = plt.bar(where, wherefreq)
+              plt.title("From where did you learn the new language(s)?")
+              plt.xlabel('Learning methods')
+              plt.ylabel('Frequency')
+      
+              plt.show()
+      
+      def timegraphs():
+          #Read TXT file
+          # check if size of file is 0
+          file_path = "/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt"
+          if os.stat(file_path).st_size == 0:
+              errormsg = Label(root,text = "Data in unavailable at the moment", foreground="red",background='#DCDCDC', font=("helvetica", 10))
+              errormsg.place(relx=0.75, rely=0.7, anchor=CENTER)
+          else:
+              #Read TXT file and graph the data
+              fid=open("/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt")
+              file = fid.read()
+              
+              plt.figure()
+              
+              time = ['Less than half a year', 'Half a year', 'A year', 'More than a year']
+              timefreq=[]
+              for k in time:
+                timefreq.append(file.count(k))
+              cb8 = plt.pie(timefreq, labels=time, autopct='%1.1f%%')
+              plt.title("How long did you spend learning the new language(s)?")
+      
+              plt.show()
+      
+      def levelgraphs():
+          #Read TXT file
+          # check if size of file is 0
+          file_path = "/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt"
+          if os.stat(file_path).st_size == 0:
+              errormsg = Label(root,text = "Data in unavailable at the moment", foreground="red",background='#DCDCDC', font=("helvetica", 10))
+              errormsg.place(relx=0.75, rely=0.7, anchor=CENTER)
+          else:
+              #Read TXT file and graph the data
+              fid=open("/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt")
+              file = fid.read()
+              
+              plt.figure()
+              
+              level = ['1 - Not really experienced with them', '2 - Good at them', '3 - Very experienced with them']
+              levelfreq=[]
+              for k in level:
+                levelfreq.append(file.count(k))
+              cb9 = plt.pie(levelfreq, labels=level, autopct='%1.1f%%')
+              plt.title("How experienced are you at the language(s) you learned on a scale from 1 to 3?")
+      
+              plt.show()
+      
+      def ansgraphs():
+          #Read TXT file
+          # check if size of file is 0
+          file_path = "/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt"
+          if os.stat(file_path).st_size == 0:
+              errormsg = Label(root,text = "Data in unavailable at the moment", foreground="red",background='#DCDCDC', font=("helvetica", 10))
+              errormsg.place(relx=0.75, rely=0.7, anchor=CENTER)
+          else:
+              #Read TXT file and graph the data
+              fid=open("/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt")
+              file = fid.read()
+              
+              plt.figure()
+              ans = ['Yes', 'No', 'Maybe']
+              ansfreq=[]
+              for k in ans:
+                ansfreq.append(file.count(k))
+              cb10 = plt.pie(ansfreq, labels=ans, autopct='%1.1f%%')
+              plt.title("Does learning the new language(s) help you in a way in your career?")
+      
+              plt.figure()
+      
+      def jobgraphs():
+          #Read TXT file
+          # check if size of file is 0
+          file_path = "/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt"
+          if os.stat(file_path).st_size == 0:
+              errormsg = Label(root,text = "Data in unavailable at the moment", foreground="red",background='#DCDCDC', font=("helvetica", 10))
+              errormsg.place(relx=0.75, rely=0.7, anchor=CENTER)
+          else:
+              #Read TXT file and graph the data
+              fid=open("/Users/emansarahafi/Downloads/Telegram Files for Project/channel_messages.txt")
+              file = fid.read()
+              
+              plt.figure()
+              
+              job = ['Application Developer', 'Computer Engineer', 'Data Scientist', 'Programmer', 'Web Designer', 'Other career option']
+              jobfreq=[]
+              for k in job:
+                jobfreq.append(file.count(k))
+              cb11 = plt.bar(job, jobfreq)
+              plt.title("What are your future career goals?")
+              plt.xlabel('Career options')
+              plt.ylabel('Frequency')
+      
+              plt.show()
+    </code></pre>
+
+    <footer>
+		<style>
+			/* Styling Footer */
+				footer {
+					text-align: center;
+					color: rgb(0, 0, 0);
+					padding-top: 0px;
+				}
+		</style>
+		<p> Tashfeen Engineering Solutions 2022<br> <a href="https://www.tashfeen.tech"> Powered by Tashfeen</a></p>
+	</footer>
+  </body>

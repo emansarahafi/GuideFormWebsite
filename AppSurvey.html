@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		College Senior Students Survey
+	</title>
+
+	<script>
+		$(AppSurvey).ready(function () {
+			$('submit').click(function() {
+			  checked = $("input[type=checkbox]:checked").length;
+		
+			  if(!checked) {
+				alert("Please select one checkbox to submit.");
+				return false;
+			  }
+		
+			});
+		});
+	</script>
+
+	<style>
+
+		/* Styling the Body element i.e. Color,
+		Font, Alignment */
+		body {
+			background-color: #DCDCDC;
+			font-family: Verdana;
+			text-align: center;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input,
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		button {
+			background-color: #696969;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+
+	</style>
+
+        <img class="image2" src="GuideForm.png" alt="GuideForm.app" width="200" height="200">
+
+</head>
+
+<body>
+	<h1 style="color:black;">Survey for Senior Engineering Students Graduating Universities</h1>
+	
+	<form action="AppSurvey.php" method="post">
+		<!-- Details -->
+		<div class="form-control">
+			<label for="name" id="label-name">
+				Name
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="namesec"
+				name = "name"
+				placeholder="Enter your name" required />
+		</div>
+
+		<div class="form-control">
+			<label for="email" id="label-email">
+				Email
+			</label>
+
+			<!-- Input Type Email-->
+			<input type="email"
+				id="emailsec"
+				name = "email"
+				placeholder="Enter your email" required />
+		</div>
+
+		<div class="form-control">
+			<label for="age" id="label-age">
+					Age
+			</label>
+
+			<!-- Input Type Radio Button -->
+			<label><input type="radio" name="age" value = "18-20" required/>18-20</input></label>
+			<label><input type="radio" name="age" value = "21-29">21-29</input></label>
+			<label><input type="radio" name="age" value = "30-39">30-39</input></label>
+			<label><input type="radio" name="age" value = "40-49">40-49</input></label>
+			<label><input type="radio" name="age" value = "50 or above">50 or above</input></label>
+		</div>
+
+		<div class="form-control">
+			<label>
+				Gender
+			</label>
+
+			<!-- Input Type Radio Button -->
+			<label><input type="radio" name="gender" value = "Male" required/>Male</input></label>
+			<label><input type="radio" name="gender" value = "Female">Female</input></label>
+		</div>
+
+		<div class="form-control">
+			<label for="uni" id="label-uni">
+				University
+			</label>
+				
+			<!-- Dropdown options -->
+			<select name="uni" id="uni" required>
+				<option>Ahlia University (AU)</option>
+				<option>American University of Bahrain (AUBH)</option>
+				<option>Applied Science University (ASU)</option>
+				<option>Arab Open University (AOU)</option>
+				<option>Arabian Gulf University (AGU)</option>
+				<option>Bahrain Institute of Banking and Finance (BIBF)</option>
+				<option>Bahrain Polytechnic (BP)</option>
+				<option>Bahrain Training Institute (BTI)</option>
+				<option>British University of Bahrain (BUB)</option>
+				<option>Gulf University (GU)</option>
+                <option>Kingdom University (KU)</option>
+				<option>Royal College of Surgeons in Ireland (RCSI) - Bahrain</option>
+				<option>Royal University for Women (RUW)</option>
+                <option>University College of Bahrain (UCB)</option>
+				<option>University of Bahrain (UOB)</option>
+				<option>University of Technology Bahrain (UTB)</option>
+				<option>Other University</option>
+			</select>
+		</div>
+
+		<div class="form-control">
+			<label for="university" id="label-university">
+					If your university is not showing, type it here
+					<small>(Type "None" if you selected your university from the previous question)</small>
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="unisec"
+				name = "university"
+				placeholder="Enter your university" required />
+		</div>
+
+		<div class="form-control">
+			<label for="role" id="label-role">
+				Which major are you enrolled in?
+			</label>
+				
+			<!-- Dropdown options -->
+			<select name="roleoption" id="role" required>
+				<option>Aerospace Engineering</option>
+				<option>Agricultural Engineering</option>
+				<option>Architectural Engineering</option>
+				<option>Biological Engineering</option>
+				<option>Biomedical Engineering</option>
+				<option>Chemical Engineering</option>
+				<option>Civil Engineering</option>
+                <option>Computer Engineering</option>
+				<option>Computer Science</option>
+				<option>Electrical Engineering</option>
+				<option>Engineering Management</option>
+                <option>Industrial Engineering</option>
+				<option>Manufacturing Engineering</option>
+				<option>Marine Engineering</option>
+				<option>Materials Science</option>
+				<option>Mechanical Engineering</option>
+				<option>Mining Engineering</option>
+				<option>Nuclear Engineering</option>
+				<option>Petroleum Engineering</option>
+				<option>Software Engineering</option>
+				<option>Systems Engineering</option>
+				<option>Other Major</option>
+			</select>
+		</div>
+
+		<div class="form-control">
+			<label for="major" id="label-major">
+					If your major is not showing, type it here
+					<small>(Type "None" if you selected your major from the previous question)</small>
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="majorsec"
+				name = "major"
+				placeholder="Enter your major" required />
+		</div>
+
+		<div class="form-control">
+			<label>
+				What is your next step after graduating from university?
+			</label>
+
+			<!-- Input Type Radio Button -->
+			<label><input type="radio" name="radiooption" value = "Work on a start-up" required/>Work on a start-up</input></label>
+			<label><input type="radio" name="radiooption" value = "Work at a company">Work at a company</input></label>
+			<label><input type="radio" name="radiooption" value = "Enroll for graduate studies">Enroll for graduate studies</input></label>
+			<label><input type="radio" name="radiooption" value = "Take time off">Take time off</input></label>
+			<label><input type="radio" name="radiooption" value = "Other next step">Other next step<input type="text" name = "otherradiooption" value ="Other" /></input></label>
+		</div>
+
+
+		<div class="form-control">
+			<label>Languages and Frameworks known
+				<small>(Check all that apply)</small>
+			</label>
+
+			<!-- Input Type Checkbox -->
+			<label><input type="checkbox" name="inp[]" value = "Blockchain">Blockchain</input></label>
+			<label><input type="checkbox" name="inp[]" value = "C">C</input></label>
+			<label><input type="checkbox" name="inp[]" value = "C++">C++</input></label>
+			<label><input type="checkbox" name="inp[]" value = "HTML">HTML</input></label>
+			<label><input type="checkbox" name="inp[]" value = "Java">Java</input></label>
+			<label><input type="checkbox" name="inp[]" value = "JavaScript">JavaScript</input></label>
+			<label><input type="checkbox" name="inp[]" value = "MATLAB">MATLAB</input></label>
+			<label><input type="checkbox" name="inp[]" value = "PHP">PHP</input></label>
+			<label><input type="checkbox" name="inp[]" value = "Python">Python</input></label>
+			<label><input type="checkbox" name="otherinp" value = "Other language(s)" onclick="enableElement(this.form.elements['inpother']);">Other language(s)<input type="text" name="inpother" value = "Other" /></input></label>
+		</div>
+
+		<div class="form-control">
+			<label>From where did you learn the new language(s)?
+				<small>(Check all that apply)</small>
+			</label>
+
+			<!-- Input Type Checkbox -->
+			<label><input type="checkbox" name="where[]" value = "College">College</input></label>
+			<label><input type="checkbox" name="where[]" value = "Online lectures">Online lectures</input></label>
+			<label><input type="checkbox" name="where[]" value = "Self-taught">Self-taught</input></label>
+			<label><input type="checkbox" name="otherwhere" value = "Other learning method" onclick="enableElement(this.form.elements['whereother']);">Other learning method<input type="text" name="whereother" value = "Other" /></input></label>				
+		</div>
+
+		<div class="form-control">
+			<label>
+				How long did you spend learning the new language(s)?
+			</label>
+
+			<!-- Input Type Radio Button -->
+			<label><input type="radio" name="time" value = "Less than half a year" required/>Less than half a year</input></label>
+			<label><input type="radio" name="time" value = "Half a year">Half a year</input></label>
+			<label><input type="radio" name="time" value = "A year">A year</input></label>
+			<label><input type="radio" name="time" value = "More than a year">More than a year</input></label>
+		</div>
+
+		<div class="form-control">
+			<label>
+				How experienced are you at the language(s) you learned on a scale from 1 to 3?
+			</label>
+
+			<!-- Input Type Radio Button -->
+			<label><input type="radio" name="rating" value = "1 - Not really experienced with them" required/>1 - Not really experienced with them</input></label>
+			<label><input type="radio" name="rating" value = "2 - Good at them">2 - Good at them</input></label>
+			<label><input type="radio" name="rating" value = "3 - Very experienced with them">3 - Very experienced with them</input></label>
+		</div>
+
+		<div class="form-control">
+			<label>
+				Does learning the new language(s) help you in a way in your career?
+			</label>
+
+			<!-- Input Type Radio Button -->
+			<label><input type="radio" name="answer" value = "Yes" required/>Yes</input></label>
+			<label><input type="radio" name="answer" value = "No">No</input></label>
+			<label><input type="radio" name="answer" value = "Maybe">Maybe</input></label>
+		</div>
+
+		<div class="form-control">
+			<label>What are your future career goals?
+				<small>(Check all that apply)</small>
+			</label>
+
+			<!-- Input Type Checkbox -->
+			<label><input type="checkbox" name="job[]" value = "Application Developer">Application Developer</input></label>
+			<label><input type="checkbox" name="job[]" value = "Computer Engineer">Computer Engineer</input></label>
+			<label><input type="checkbox" name="job[]" value = "Data Scientist">Data Scientist</input></label>
+			<label><input type="checkbox" name="job[]" value = "Programmer">Programmer</input></label>
+			<label><input type="checkbox" name="job[]" value = "Web Designer">Web Designer</input></label>
+			<label><input type="checkbox" name="otherjob" value = "Other career option" onclick="enableElement(this.form.elements['jobother']);">Other career option<input type="text" name="jobother" value = "Other" /></input></label>						
+		</div>
+
+		<div class="form-control">
+			<label for="comment">
+				Any comments or suggestions
+			</label>
+
+			<!-- multi-line text input control -->
+			<textarea name="commentsection" id="comment"
+				placeholder="Enter your comments here">
+			</textarea>
+		</div>
+
+		<!-- Multi-line Text Input Control -->
+		<button type="submit" value="submit" name="submit">
+			Submit
+		</button>
+	</form>
+	
+	<footer>
+		<style>
+			/* Styling Footer */
+				footer {
+					text-align: center;
+					color: #fff;
+					padding: 3px;
+				}
+		</style>
+		<p> Tashfeen Engineering Solutions 2022<br> <a href="https://www.tashfeen.tech"> Powered by Tashfeen</a></p>
+	</footer>
+
+	<script>
+		function json(url) {
+			return fetch(url).then(res => res.json());
+			}
+				
+		let apiKey = '6c4bf0499e7506d316a833f0911c4306';
+		json('https://api.ipdata.co?api-key=${apiKey}').then(data => {
+			console.log(data.ip);
+			console.log(data.city);
+			console.log(data.country_code);
+			});
+	</script>
+
+</body>
+
+</html>

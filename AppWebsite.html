@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		GuideForm's Official Website
+	</title>
+	
+	<style>
+
+		/* Styling the Body element i.e. Color,
+		Font, Alignment */
+		body {
+			background-color: #DCDCDC;
+			font-family: Verdana;
+			text-align: center;
+			margin: 0;
+    		padding: 0;
+
+		}
+
+		.datetime {
+			vertical-align: top;
+			text-align: left;
+			font-family: inherit;
+			font-size: 10px;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		div.text {
+			position: absolute;
+			padding-top: 150px;
+			left: 70px;  
+			width: 500px;
+			height: 50px;
+		} 
+
+		.vl {
+			border-left: 1px dashed black;
+			height: 540px;
+			position: absolute;
+			left: 50%;
+			margin-left: 3px;
+			top: 50;
+		}
+
+		div.btns {
+			position: absolute;
+			padding-top: 50px;
+			padding-right: 250px;
+			right: 50px;  
+			width: 150px;
+			height: 50px;
+			background-color: #DCDCDC;
+			display: block;
+		} 
+
+		button {
+			background-color: #EFEFEF;
+			border: 1px solid #777;
+			border-radius: 1px;
+			font-family: inherit;
+			font-size: 15px;
+			display: block;
+			width: 100%;
+			margin-top: 100px;
+			margin-bottom: 40px;
+		}
+		
+		.dropbtn {
+			background-color: #EFEFEF;
+			border: 1px solid #777;
+			border-radius: 1px;
+			font-family: inherit;
+			font-size: 14.5px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 30px;
+		}
+
+		/* The container <div> - needed to position the dropup content */
+		.dropup {
+			position: relative;
+			display: inline-block;
+		}
+
+		/* Dropup content (Hidden by Default) */
+		.dropup-content {
+			display: none;
+			position: absolute;
+			bottom: 50px;
+			background-color: #f1f1f1;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+
+		/* Links inside the dropup */
+		.dropup-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			font-size: 14.5px;
+			display: block;
+		}
+
+		/* Change color of dropup links on hover */
+		.dropup-content a:hover {background-color: #ddd}
+
+		/* Show the dropup menu on hover */
+		.dropup:hover .dropup-content {
+			display: block;
+		}
+
+		/* Change the background color of the dropup button when the dropup content is shown */
+		.dropup:hover .dropbtn {
+			background-color: #2980B9;
+		}
+
+	</style>
+
+	<h3 class = "datetime" id="current_date">
+		<script>
+		document.getElementById("current_date").innerHTML = Date();
+		</script>
+	</h3>
+
+    <img class="image1" src="GuideForm.png" alt="GuideForm.tech" width="200" height="200">
+	
+</head>
+
+
+
+<body>
+	<h2><p></p></h2>
+	<!-- Multi-line Text Input Control -->
+	<div class="vl"></div>
+
+	<div class="text">
+        <!-- Dummy Text start -->
+        <p>
+			Tashfeen Engineering Solutions is a geotechnical, civil engineering, and software development company
+			established in 2020.
+			It has worked on several projects on national & international scales. 
+			The engineering firm will start to expand overseas, and to do so, 
+			a survey must be done to understand the young engineers' qualities overseas.
+			We chose to begin with Bahrain because the kingdom has a well-established & most recognized 
+			engineering infrastructure in the Middle East.
+			Thus, kindly answer our survey on our application GuideForm for our research purposes.
+			For any inquiries, please do not hesitate to contact us on our website.
+        </p>
+    </div>
+
+	<div class="btns">
+		<button type="submit" value="submit" name="submit" onclick="window.location.href='http://localhost/TashfeenUniForm/appsurvey.html'">
+			Access the survey
+		</button>
+		<div class="dropup">
+			<button class="dropbtn">Access every code</button>  
+				<div class="dropup-content"> 
+					<a href="http://localhost/TashfeenUniForm/appcode.html">The entire code</a> 
+					<a href="http://localhost/TashfeenUniForm/librariescode.html">The necessary libraries</a> 
+					<a href="http://localhost/TashfeenUniForm/windowcode.html">The window's design</a>
+					<a href="http://localhost/TashfeenUniForm/telegramcode.html">Telegram extraction code</a>
+					<a href="http://localhost/TashfeenUniForm/graphscode.html">Graphing the results</a>
+					<a href="http://localhost/TashfeenUniForm/functionscode.html">Adding functions to the button & dropdown menus & positioning them</a>  
+				</div> 
+		</div>
+		<div class="dropup">
+			<button class="dropbtn">Access links about</button>  
+				<div class="dropup-content"> 
+					<a href="http://localhost/TashfeenUniForm/guideform.pdf">The application</a> 
+					<a href="https://tashfeen.tech/">The company</a>    
+				</div> 
+		</div>
+	</div>
+
+	<footer>
+		<style>
+			/* Styling Footer */
+				footer {
+					text-align: center;
+					color: #fff;
+					padding-top: 550px;
+				}
+		</style>
+		<p> Tashfeen Engineering Solutions 2022<br> <a href="https://www.tashfeen.tech"> Powered by Tashfeen</a></p>
+	</footer>
+
+</body>
+
+</html>
