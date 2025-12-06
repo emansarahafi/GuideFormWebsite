@@ -1,0 +1,117 @@
+/* Styling the Body element i.e. Color, Font, Alignment */
+body {
+	background-color: #DCDCDC;
+	font-family: Verdana;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+.datetime {
+	vertical-align: top;
+	text-align: left;
+	font-family: inherit;
+	font-size: 10px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+div.text {
+	position: absolute;
+	padding-top: 150px;
+	left: 70px;  
+	width: 500px;
+	height: 50px;
+} 
+
+.vl {
+	border-left: 1px dashed black;
+	height: 540px;
+	position: absolute;
+	left: 50%;
+	margin-left: 3px;
+	top: 50;
+}
+
+div.btns {
+	position: absolute;
+	padding-top: 50px;
+	padding-right: 250px;
+	right: 50px;  
+	width: 150px;
+	height: 50px;
+	background-color: #DCDCDC;
+	display: block;
+} 
+
+button {
+	background-color: #EFEFEF;
+	border: 1px solid #777;
+	border-radius: 1px;
+	font-family: inherit;
+	font-size: 15px;
+	display: block;
+	width: 100%;
+	margin-top: 100px;
+	margin-bottom: 40px;
+}
+
+.dropbtn {
+	background-color: #EFEFEF;
+	border: 1px solid #777;
+	border-radius: 1px;
+	font-family: inherit;
+	font-size: 14.5px;
+	display: block;
+	width: 100%;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+/* The container <div> - needed to position the dropup content */
+.dropup {
+	position: relative;
+	display: inline-block;
+}
+
+/* Dropup content (Hidden by Default) */
+.dropup-content {
+	display: none;
+	position: absolute;
+	bottom: 50px;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+/* Links inside the dropup */
+.dropup-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	font-size: 14.5px;
+	display: block;
+}
+
+/* Change color of dropup links on hover */
+.dropup-content a:hover {
+	background-color: #ddd;
+}
+
+/* Show the dropup menu on hover */
+.dropup:hover .dropup-content {
+	display: block;
+}
+
+/* Change the background color of the dropup button when the dropup content is shown */
+.dropup:hover .dropbtn {
+	background-color: #2980B9;
+}
+
+/* Styling Footer */
+footer {
+	text-align: center;
+	color: #fff;
+	padding-top: 550px;
+}

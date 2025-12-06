@@ -37,6 +37,6 @@ if(isset($_POST['submit']))
     $iplex = $_SERVER['REMOTE_ADDR'];
     $message = urlencode("\nName: ".$name."\nEmail: ".$email."\nAge: ".$age."\nGender: ".$gender."\nUniversity: ".$uni."\nIf your university is not showing, type it here: ".$university."\nMajor: ".$role."\nIf your major is not showing, type it here: ".$major."\nWhat is your next step after graduating from university? ".$radio."\nLanguages and Frameworks known: ".$check."\nFrom where did you learn the new language(s)? ".$where."\nHow long did you spend learning the new language(s)? ".$time."\nHow experienced are you at the language(s) you learned on a scale from 1 to 3? ".$rate."\nDoes learning the new language(s) help you in a way in your career? ".$answer."\nWhat are your future career goals? ".$futurejob."\nAny comments or suggestions: ".$comment."\nIP Address: ".$iplex);
     $response = file_get_contents(url."sendmessage?text=".$message."&chat_id=".$chat_id."&parse_mode=HTML");
-    header("Location: http://localhost/TashfeenUniForm/appconfirmation.html");
+    header("Location: appconfirmation.html");
     exit;
 ?>
