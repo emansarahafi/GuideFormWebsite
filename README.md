@@ -4,6 +4,8 @@
 
 A website for GuideForm, a Python application for surveying purposes.
 
+> **Related Project:** [GuideFormPython](https://github.com/emansarahafi/GuideFormPython) - Desktop Tkinter application that provides comprehensive functionality for accessing surveys, company information, and visualizing collected data through interactive graphs.
+
 ## About
 
 Tashfeen Engineering Solutions is a geotechnical, civil engineering, and software development company established in 2020. This website serves as the web interface for the GuideForm application, which facilitates surveys for engineering research purposes.
