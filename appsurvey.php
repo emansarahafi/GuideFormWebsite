@@ -1,5 +1,5 @@
 <?php
-define ('url',"https://api.telegram.org/botINSERT_BOT_TOEKN_HERE/");
+define ('url',"https://api.telegram.org/botINSERT_BOT_TOKEN_HERE/");
 
 $chat_id = 'INSERT_CHAT_ID_HERE';
 if(isset($_POST['submit']))
