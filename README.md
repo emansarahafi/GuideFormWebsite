@@ -15,14 +15,16 @@ GuideFormWebsite/
 ├── assets/
 │   └── images/
 │       ├── GuideForm.png
-│       └── GuideForm.pdf
+│       ├── GuideForm.pdf
+│       └── GuideForm.ico
 ├── css/
 │   ├── main.css
 │   ├── survey.css
 │   └── confirmation.css
 ├── js/
 │   ├── main.js
-│   └── survey.js
+│   ├── survey.js
+│   └── geolocation.js
 ├── docs/
 │   └── code/
 │       ├── appcode.html
@@ -35,6 +37,7 @@ GuideFormWebsite/
 ├── appsurvey.html
 ├── appsurvey.php
 ├── appconfirmation.html
+├── .gitignore
 └── README.md
 ```
 
@@ -42,10 +45,10 @@ GuideFormWebsite/
 
 **Main Pages:**
 
-- `index.html` - Main landing page
-- `appsurvey.html` - Survey form page
-- `appsurvey.php` - Backend processing for survey submissions
-- `appconfirmation.html` - Confirmation page after survey submission
+- `index.html` - Main landing page with company info and navigation
+- `appsurvey.html` - Interactive survey form for engineering students
+- `appsurvey.php` - Server-side form processor with Telegram API integration
+- `appconfirmation.html` - Success confirmation page after form submission
 
 **Documentation (docs/code/):**
 
@@ -58,15 +61,25 @@ GuideFormWebsite/
 
 **Assets:**
 
-- `assets/images/` - Images and PDF files
-- `css/` - External stylesheets for all pages
-- `js/` - External JavaScript files
+- `assets/images/` - Images, PDF files, and favicon
+- `css/` - External stylesheets (main.css, survey.css, confirmation.css)
+- `js/` - External JavaScript files (main.js, survey.js, geolocation.js)
 
 ## Usage
 
 1. Open `index.html` in a web browser to access the main page
-2. Click "Access the survey" to fill out the survey form
-3. Use the dropdown menus to view various code documentation
+2. Click "Access the survey" to fill out the engineering student survey
+3. Form submissions are processed via PHP and sent to Telegram
+4. Use the dropdown menus to view various code documentation
+
+## Features
+
+- 📱 Responsive design with clean UI
+- 🎨 Separated CSS for maintainability
+- 📝 Form validation with jQuery
+- 🌍 IP geolocation tracking
+- 🤖 Telegram bot integration for form submissions
+- 🖼️ Custom favicon and branding
 
 ## Technologies Used
 
